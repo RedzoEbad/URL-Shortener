@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-"test": "echo \"No tests specified\" && exit 0",
-"build": "echo Building project... && if exist dist rmdir /s /q dist && mkdir dist && xcopy View dist\\views /E /I && if exist public xcopy public dist\\public /E /I && copy Main.js dist\\",
+  "build": "echo Building project... && rm -rf dist && mkdir dist && cp -r View dist/views && [ -d public ] && cp -r public dist/public || true && cp Main.js dist/ && cp Connection.js dist/ && cp -r routes dist/routes && cp -r models dist/models",
   "start": "node dist/Main.js",
-  "dev": "nodemon Main.js"
+  "dev": "nodemon Main.js",
+  "test": "echo \"No tests specified\" && exit 0"
 },
   "author": "",
   "license": "ISC",
