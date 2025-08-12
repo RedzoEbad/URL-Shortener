@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
 "test": "echo \"No tests specified\" && exit 0",
-  "build": "echo \"Building project...\" && mkdir -p dist && cp -r views dist/views && cp -r public dist/public && cp Main.js dist/",
+"build": "echo Building project... && if exist dist rmdir /s /q dist && mkdir dist && xcopy View dist\\views /E /I && if exist public xcopy public dist\\public /E /I && copy Main.js dist\\",
   "start": "node dist/Main.js",
   "dev": "nodemon Main.js"
 },
