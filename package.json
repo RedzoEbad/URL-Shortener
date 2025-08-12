@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "echo Building project... && rm -rf dist && mkdir dist && cp -r View dist/views && [ -d public ] && cp -r public dist/public || true && cp Main.js dist/ && cp Connection.js dist/ && cp -r routes dist/routes && cp -r models dist/models",
-  "start": "node dist/Main.js",
+"build": "echo Building project... && rm -rf dist && mkdir dist && cp -r View dist/View && [ -d public ] && cp -r public dist/public || true && cp Main.js dist/ && cp Connection.js dist/ && [ -d Routes ] && cp -r Routes dist/Routes || true && [ -d Model ] && cp -r Model dist/Model || true",
   "dev": "nodemon Main.js",
   "test": "echo \"No tests specified\" && exit 0"
 },
