@@ -26,6 +26,7 @@ async function Handle_Post_Request(req, res) {
         });
 
     } catch (err) {
+        console.log("errr");
         console.log("Error occurred in POST controller: " + err);
         return res.status(500).send("Internal Server Error");
     }
