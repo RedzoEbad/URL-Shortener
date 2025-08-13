@@ -33,7 +33,7 @@ async function Handle_Post_Request(req, res) {
 
 // Function to handle GET request for redirecting to the original URL
 async function Handle_Get_Request(req, res) {
-    console.log(req);
+   
     const id = req.params.id; // Retrieve the short URL ID from the request parameters
 
     if (!id) {
